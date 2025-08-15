@@ -1,0 +1,94 @@
+package com.example.mocktest_app.Adapters;
+
+import android.annotation.SuppressLint;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.mocktest_app.Models.Questionmodel;
+import com.example.mocktest_app.R;
+
+import java.util.List;
+
+public class BookmarkAdaptor extends RecyclerView.Adapter<BookmarkAdaptor.ViewHolder> {
+
+    private final List<Questionmodel> quesList;
+
+    public BookmarkAdaptor(List<Questionmodel> quesList) {
+        this.quesList = quesList;
+    }
+
+    @NonNull
+    @Override
+    public BookmarkAdaptor.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.bookmark_item,parent,false);
+        return new BookmarkAdaptor.ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull BookmarkAdaptor.ViewHolder holder, int position) {
+        String ques = quesList.get(position).getQuestion();
+        String a = quesList.get(position).getA();
+        String b = quesList.get(position).getB();
+        String c = quesList.get(position).getC();
+        String d = quesList.get(position).getD();
+        int ans = quesList.get(position).getCorrectAns();
+
+        holder.setData(position,ques,a,b,c,d,ans);
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return quesList.size();
+    }
+
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        private TextView quesNo, question, optionA, optionB, optionC, optionD, result;
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+
+            quesNo = itemView.findViewById(R.id.quesNo);
+            question = itemView.findViewById(R.id.question);
+            optionA = itemView.findViewById(R.id.ansA);
+            optionB = itemView.findViewById(R.id.ansB);
+            optionC = itemView.findViewById(R.id.ansC);
+            optionD = itemView.findViewById(R.id.ansD);
+            result = itemView.findViewById(R.id.result);
+        }
+        @SuppressLint("SetTextI18n")
+        private void setData(int pos, String ques, String a, String b, String c, String d, int correctAns)
+        {
+            quesNo.setText("Question No." + String.valueOf(pos+1));
+            question.setText(ques);
+            optionA.setText("A " + a);
+            optionB.setText("B " + b);
+            optionC.setText("C " + c);
+            optionD.setText("D " + d);
+
+            if (correctAns == 1)
+            {
+               result.setText("ANSWER:" + a);
+            }
+            else  if (correctAns == 2)
+            {
+                result.setText("ANSWER:" + b);
+            }
+            else  if (correctAns == 3)
+            {
+                result.setText("ANSWER:" + c);
+            }
+            else
+            {
+                result.setText("ANSWER:" + d);
+            }
+
+
+        }
+    }
+}

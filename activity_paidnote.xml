@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints"
+        android:background="#5FABD5">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="762dp">
+
+            <LinearLayout
+                android:layout_width="407dp"
+                android:layout_height="760dp"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="1dp"
+                tools:layout_editor_absoluteY="1dp"
+                tools:ignore="MissingConstraints">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Subscriptions"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="30dp"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="118dp"
+                        tools:layout_editor_absoluteY="41dp" />
+
+                    <ScrollView
+                        android:layout_width="405dp"
+                        android:layout_height="758dp"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintTop_toBottomOf="@+id/textView"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="350dp"
+                                android:layout_height="500dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:background="@color/white"
+                                android:elevation="30dp"
+                                app:cardCornerRadius="50dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@color/white"
+                                    android:orientation="vertical">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:orientation="vertical">
+
+                                            <ImageView
+                                                android:layout_width="295dp"
+                                                android:layout_height="313dp"
+                                                android:src="@drawable/javasub"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <Button
+                                                android:id="@+id/paid1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="1000 Rs"
+                                                android:backgroundTint="#303F9F"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="60dp"
+                                                android:textSize="18sp"/>
+
+                                        </LinearLayout>
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="350dp"
+                                android:layout_height="500dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:background="@color/white"
+                                android:elevation="30dp"
+                                app:cardCornerRadius="50dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@color/white"
+                                    android:orientation="vertical">
+
+
+                                    <ImageView
+                                        android:layout_width="295dp"
+                                        android:layout_height="313dp"
+                                        android:src="@drawable/pythonpaid"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <Button
+                                        android:id="@+id/paid2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1000 Rs"
+                                        android:backgroundTint="#303F9F"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="60dp"
+                                        android:textSize="18sp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="350dp"
+                                android:layout_height="500dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:background="@color/white"
+                                android:elevation="30dp"
+                                app:cardCornerRadius="50dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@color/white"
+                                    android:orientation="vertical">
+
+
+                                    <ImageView
+                                        android:layout_width="295dp"
+                                        android:layout_height="313dp"
+                                        android:src="@drawable/aipaid"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <Button
+                                        android:id="@+id/paid3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1000 Rs"
+                                        android:backgroundTint="#303F9F"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="60dp"
+                                        android:textSize="18sp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="350dp"
+                                android:layout_height="500dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:background="@color/white"
+                                android:elevation="30dp"
+                                app:cardCornerRadius="50dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@color/white"
+                                    android:orientation="vertical">
+
+
+                                    <ImageView
+                                        android:layout_width="295dp"
+                                        android:layout_height="313dp"
+                                        android:src="@drawable/mathspaid"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <Button
+                                        android:id="@+id/paid4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1000 Rs"
+                                        android:backgroundTint="#303F9F"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="60dp"
+                                        android:textSize="18sp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="350dp"
+                                android:layout_height="500dp"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:background="@color/white"
+                                android:elevation="30dp"
+                                app:cardCornerRadius="50dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@color/white"
+                                    android:orientation="vertical">
+
+
+                                    <ImageView
+                                        android:layout_width="295dp"
+                                        android:layout_height="313dp"
+                                        android:src="@drawable/pdpaid"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+                                    <Button
+                                        android:id="@+id/paid5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="1000 Rs"
+                                        android:backgroundTint="#303F9F"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="60dp"
+                                        android:textSize="18sp"/>
+
+                                </LinearLayout>
+                            </androidx.cardview.widget.CardView>
+
+
+
+                        </LinearLayout>
+
+
+                    </ScrollView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
